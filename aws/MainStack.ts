@@ -17,7 +17,10 @@ export default class MainStack extends sst.Stack {
             job: {
                 function: cronFn
             },
-            schedule: 'cron(*/5 6-8 * * ? *)',
+            /**
+             * Starting at 11 UTC (6am CST) to 13 UTC (8am CST) every 5min, every day
+             */
+            schedule: 'cron(*/5 11-13 * * ? *)',
         })
 
       
